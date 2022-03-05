@@ -1,29 +1,30 @@
-star = '*'
-endStar = ''
-userInput = input("Masukkan base number yang diinginkan : ")
+userInput = input("Enter desired symbol as indicator : ")
+symbolCustom = str(userInput)
+userInput = input("Enter desired number to generate the symbol : ")
 countRange = int(userInput)
+endStar = ''
 
 # right triangle
 print('Right Triangle on Left anchor')
 for i in range(countRange):
-    endStar = star*(i+1)
+    endStar = symbolCustom*(i+1)
     print(endStar)
 
 print('\nRight Triangle on Right anchor')
 for i in range(countRange):
-    endStar = ' '*(countRange-(i+1))+(star*(i+1))
+    endStar = ' '*(countRange-(i+1))+(symbolCustom*(i+1))
     print(endStar)
 
 
 # Inverted right triangle
 print('\nInverted right Triangle on Left anchor')
 for i in range(countRange):
-    endStar = star*(countRange-i)
+    endStar = symbolCustom*(countRange-i)
     print(endStar)
 
 print('\nInverted right Triangle on Right anchor')
 for i in range(countRange):
-    endStar = (' '*i)+star*(countRange-i)
+    endStar = (' '*i)+symbolCustom*(countRange-i)
     print(endStar)
 
 
@@ -37,7 +38,7 @@ elif countRange % 2 == 0:
     baseRange = int(0)
 while space >= 0:
     container = []
-    endStar = (' '*space)+(star*baseRange)+(' '*space)
+    endStar = (' '*space)+(symbolCustom*baseRange)+(' '*space)
     if baseRange == 0:
         space -= 1
         baseRange += 2
@@ -49,11 +50,11 @@ while space >= 0:
     print(container)
 
 # Inverted Triangle
-print('\nTInverted riangle')
+print('\nInverted riangle')
 space = 0
 while countRange > 0:
     container = []
-    endStar = (' '*space)+(star*countRange)+(' '*space)
+    endStar = (' '*space)+(symbolCustom*countRange)+(' '*space)
     container.append(endStar)
     space += 1
     countRange -= 2
